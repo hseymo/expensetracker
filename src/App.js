@@ -86,6 +86,10 @@ function App() {
         // isLoggedIn={isLoggedIn}
       />} 
     />
+    <Route 
+      path='*' 
+      element={<Home />} 
+    />
   </Routes>
 </BrowserRouter>
   );
