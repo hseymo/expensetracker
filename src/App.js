@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home'
+import Login from './pages/Login/Login'
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -85,6 +86,12 @@ function App() {
       element={<Home
         // isLoggedIn={isLoggedIn}
       />} 
+    />
+    <Route
+      path='/login'
+      element={<Login
+        // isLoggedIn={isLoggedIn}
+    />} 
     />
     <Route 
       path='*' 

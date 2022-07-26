@@ -1,0 +1,8 @@
+.loginContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.loginSectionContainer, .signupSectionContainer {
+    width: 40%;
+}
