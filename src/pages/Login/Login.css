@@ -1,8 +1,43 @@
 .loginContainer {
     display: flex;
     justify-content: space-around;
+    border: 5px solid blue;
+    height: 60vh;
 }
 
 .loginSectionContainer, .signupSectionContainer {
     width: 40%;
+    border: 5px solid yellow;
+}
+
+.signupForm, .loginForm {
+    border: 5px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input, button {
+    width: 60%;
+    margin: 30px 10px;
+    border-radius: 5px;
+}
+
+button {
+    align-self: center;
+}
+
+.formGroup {
+    border: 5px solid orange;
+}
+
+@media screen and (max-width:700px) {
+    .loginContainer {
+        display: block;
+    }
+
+    .loginSectionContainer, .signupSectionContainer {
+        margin-bottom: 40px;
+        width: 100%;
+    }
 }
