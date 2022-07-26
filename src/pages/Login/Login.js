@@ -1,18 +1,53 @@
 import React, {useState} from 'react';
 import './Login.css'
 
-function Login(
-  // {isLoggedIn}
-  ) {
+function Login(props) {
     const [signupData, setSignupData] = useState({
         email: '',
-        userName: '',
+        username: '',
         password: ''
       })
     const [loginData, setLoginData] = useState({
-        userName: '',
+        username: '',
         password: ''
       })
+    const [errorMessage, setErrorMessage] = useState('')
+    
+    
+    const loginSubmit = e => {
+        e.preventDefault();
+        if (loginData.username == '' || loginData.password == '') {
+            setErrorMessage('Please enter your username and password')
+        } else {
+            props.login(loginData)
+            setLoginData({
+                username: '',
+                password: ''
+              })
+            setErrorMessage('')
+        }
+
+    }
+
+    const signupSubmit = e => {
+        e.preventDefault();
+        if (!signupData.email) {
+            setErrorMessage('Please enter valid email address')
+        } else if (!signupData.username) {
+            setErrorMessage('Please enter your desired username.')
+        } else if (!signupData.password.length < 8 ) {
+            setErrorMessage("Please enter password with at least 8 characters.")
+        } else {
+            props.signup(signupData)
+            setSignupData({
+                email: '',
+                username: '',
+                password: ''
+            })
+            setErrorMessage('')
+        }
+
+    }
 
   return (
     <div className='loginPage'>
@@ -20,7 +55,7 @@ function Login(
         <div className='loginContainer'>
             <div className='loginSectionContainer'>
                 <h2>Login</h2>
-                <form className='loginForm'>
+                <form className='loginForm' onSubmit={loginSubmit}>
                     <div className='formGroup'>
                         <label htmlFor='loginUsername'>Username</label>
                         <input
@@ -28,7 +63,7 @@ function Login(
                             // value={loginData.username}
                             type='text'
                             placeholder='username'
-                            onChange={(e) => setLoginData({...loginData, userName: e.target.value})}
+                            onChange={(e) => setLoginData({...loginData, username: e.target.value})}
                         />
                     </div>
                     <div className='formGroup'>
@@ -46,7 +81,7 @@ function Login(
             </div>
             <div className='signupSectionContainer'>
                 <h2>Signup</h2>
-                <form className='signupForm'>
+                <form className='signupForm' onSubmit={signupSubmit}>
                     <div className='formGroup'>
                         <label htmlFor='signupEmail'>Email</label>
                         <input
@@ -64,7 +99,7 @@ function Login(
                             // value={signupData.username}
                             type='text'
                             placeholder='username'
-                            onChange={(e) => setSignupData({...signupData, userName: e.target.value})}
+                            onChange={(e) => setSignupData({...signupData, username: e.target.value})}
                         />
                     </div>
                     <div className='formGroup'>
@@ -73,7 +108,7 @@ function Login(
                             name="signupPassword"
                             // value={signupData.password}
                             type='text'
-                            placeholder='password'
+                            placeholder='password (min 8 char)'
                             onChange={(e) => setSignupData({...signupData, password: e.target.value})}
                         />
                     </div>
