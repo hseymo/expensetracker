@@ -1,17 +1,24 @@
 .loginContainer {
     display: flex;
     justify-content: space-around;
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     height: 60vh;
 }
 
 .loginSectionContainer, .signupSectionContainer {
+    background-color: var(--lightblue);
+    border-radius: 25px;
     width: 40%;
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
+}
+
+.loginSectionContainer h2, .signupSectionContainer h2 {
+    background-color: var(--lightblue);
 }
 
 .signupForm, .loginForm {
-    border: 5px solid green;
+    /* border: 5px solid green; */
+    background-color: var(--lightblue);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -25,10 +32,23 @@ input, button {
 
 button {
     align-self: center;
+    background-color: var(--darkteal);
+    color: var(--lightgray);
+    padding: 5px
 }
 
 .formGroup {
-    border: 5px solid orange;
+    /* border: 5px solid orange; */
+    background-color: var(--lightblue);
+}
+
+.formGroup label {
+    background-color: var(--lightblue);
+}
+
+.formGroup input {
+    padding: 5px;
+    border: 2px solid var(--darkteal)
 }
 
 @media screen and (max-width:700px) {

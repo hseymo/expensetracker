@@ -1,32 +1,26 @@
 .Header {
-    padding: 50px 0px 30px 0px;
     background-color: var(--darkteal);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
   }
-  
-  .Header h1 {
-    padding: 20px 60px;
-    color: var(--lightgray);
-    background-color: var(--teal);
-    align-self: center;
-  }
-  
-  nav {
-    margin-right: 30px;
-  }
-  
-  nav li {
-    display: inline-block;
-    padding: 5px;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  @media screen and (max-width: 280px) {
-    .navBar button {
-      padding-left: 120px;
-    }
-  }
+
+.navBar ul {
+  background-color: var(--teal);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.navBar a {
+  text-decoration: none;
+  background-color: var(--teal);
+  padding: 20px;
+  color: var(--lightgray)
+}
+
+.Header h1 {
+  display: inline-block;
+  padding: 20px;
+  margin: 20px;
+  color: var(--lightgray);
+  background-color: var(--darkteal);
+}

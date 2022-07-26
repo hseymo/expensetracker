@@ -6,6 +6,10 @@
     --darkteal: #388087;
 }
 
+* {
+    margin: 0
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }

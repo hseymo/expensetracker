@@ -10,6 +10,7 @@
 
 .homeHeader {
   font-size: 50px;
+  margin-top: 20px
 }
 
 .homeDescription {
@@ -18,5 +19,5 @@
 
 .homeLoginButton {
   padding: 10px 20px;
-  background-color: gray;
+  background-color: var(--lightblue);
 }
