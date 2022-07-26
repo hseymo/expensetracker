@@ -4,7 +4,9 @@ import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Settings from './pages/Settings/Settings'
+import Heading from './components/Heading/Heading'
 import API from "./components/utils/API";
+import './App.css'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -79,11 +81,11 @@ function App() {
 
   return (
 <BrowserRouter>
-  {/* <Header
+  <Heading
     isLoggedIn={isLoggedIn}
     userId={userId}
     logout={logout}
-  /> */}
+  />
   <Routes>
     <Route
       path='/'

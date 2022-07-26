@@ -1,0 +1,11 @@
+:root {
+    --lightgray: #F6F6F2;
+    --mint: #C2EDCE;
+    --lightblue: #BADFE7;
+    --teal: #6FB3B8;
+    --darkteal: #388087;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
