@@ -74,11 +74,11 @@ function App() {
 
   return (
 <BrowserRouter>
-  {/* <Header>
+  {/* <Header
     isLoggedIn={isLoggedIn}
     userId={userId}
     logout={logout}
-  </Header> */}
+  /> */}
   <Routes>
     <Route
       path='/'
@@ -89,7 +89,7 @@ function App() {
     <Route 
       path='*' 
       element={<Home />} 
-    />
+      />
   </Routes>
 </BrowserRouter>
   );
