@@ -1,7 +1,7 @@
-const BASE_URL="localhost:3001/api"
+const BASE_URL="http://localhost:3001"
 
 module.exports = {
-    getAllUsers:() => {
+    getAllUsers: () => {
         return fetch(`${BASE_URL}/api/users`)
         .then(res=> res.json())
     }, 

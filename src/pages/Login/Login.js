@@ -13,7 +13,6 @@ function Login(props) {
       })
     const [errorMessage, setErrorMessage] = useState('')
     
-    
     const loginSubmit = e => {
         e.preventDefault();
         if (loginData.username == '' || loginData.password == '') {
@@ -46,7 +45,6 @@ function Login(props) {
             })
             setErrorMessage('')
         }
-
     }
 
   return (
@@ -60,7 +58,7 @@ function Login(props) {
                         <label htmlFor='loginUsername'>Username</label>
                         <input
                             name="loginUsername"
-                            // value={loginData.username}
+                            value={loginData.username}
                             type='text'
                             placeholder='username'
                             onChange={(e) => setLoginData({...loginData, username: e.target.value})}
@@ -70,7 +68,7 @@ function Login(props) {
                         <label htmlFor='loginPassword'>Password</label>
                         <input
                             name="loginPassword"
-                            // value={loginData.password}
+                            value={loginData.password}
                             type='text'
                             placeholder='password'
                             onChange={(e) => setLoginData({...loginData, password: e.target.value})}
@@ -86,7 +84,7 @@ function Login(props) {
                         <label htmlFor='signupEmail'>Email</label>
                         <input
                             name="signupEmail"
-                            // value={signupData.email}
+                            value={signupData.email}
                             type='email'
                             placeholder='email'
                             onChange={(e) => setSignupData({...signupData, email: e.target.value})}
@@ -96,7 +94,7 @@ function Login(props) {
                         <label htmlFor='signupUsername'>Username</label>
                         <input
                             name="signupUsername"
-                            // value={signupData.username}
+                            value={signupData.username}
                             type='text'
                             placeholder='username'
                             onChange={(e) => setSignupData({...signupData, username: e.target.value})}
@@ -106,7 +104,7 @@ function Login(props) {
                         <label htmlFor='signupPassword'>Password</label>
                         <input
                             name="signupPassword"
-                            // value={signupData.password}
+                            value={signupData.password}
                             type='text'
                             placeholder='password (min 8 char)'
                             onChange={(e) => setSignupData({...signupData, password: e.target.value})}

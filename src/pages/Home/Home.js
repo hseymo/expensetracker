@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import './Home.css'
 
-function Home(
-  // {isLoggedIn}
-  ) {
+function Home({isLoggedIn}) {
 
   return (
     <div className='homeContainer'>
